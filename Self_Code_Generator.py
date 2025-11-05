@@ -1,7 +1,7 @@
 import random
 import string
 
-def Generate_Random(n = 3): 
+def Generate_Random(n = 6): 
     return ''.join(random.choice(string.ascii_letters) for _ in range(n))
 
 def encrypt(Text): 
@@ -9,8 +9,8 @@ def encrypt(Text):
         return Text[::-1]
     
     shift = Text[1:] + Text[0]
-    prefix = Generate_Random(3)
-    sufix = Generate_Random(3)
+    prefix = Generate_Random(6)
+    sufix = Generate_Random(6)
 
     encription = prefix + shift + sufix
     return encription
